@@ -1,0 +1,50 @@
+{
+	"name": "eslint-config-next-flat",
+	"version": "0.1.0",
+	"description": "(Tentative) ESLint Flat Config for Next.js",
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"eslint-flat-config",
+		"next",
+		"next.js"
+	],
+	"homepage": "https://github.com/jeremy-code/eslint-config-next-flat#README",
+	"bugs": "https://github.com/jeremy-code/eslint-config-next-flat/issues",
+	"license": "MIT",
+	"author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
+	"main": "dist/cjs/index.cjs",
+	"module": "dist/esm/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.cjs"
+		}
+	},
+	"type": "module",
+	"repository": "github:jeremy-code/eslint-config-next-flat",
+	"scripts": {
+		"prepare": "husky",
+		"build": "rollup --config rollup.config.js",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --fix .",
+		"format": "biome format --write .",
+		"format:check": "biome format ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.7.1",
+		"@next/eslint-plugin-next": "^14.2.3",
+		"eslint": "^8.56.0",
+		"eslint-import-resolver-node": "^0.3.9",
+		"eslint-import-resolver-typescript": "^3.6.1",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-jsx-a11y": "^6.8.0",
+		"eslint-plugin-react": "^7.34.1",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"globals": "^15.0.0",
+		"husky": "^9.0.11",
+		"next": "^14.2.3",
+		"rollup": "^4.16.4"
+	},
+	"packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
+}
