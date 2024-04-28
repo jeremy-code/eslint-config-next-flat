@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-next-flat",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "(Tentative) ESLint Flat Config for Next.js",
 	"keywords": [
 		"eslint",
@@ -43,7 +43,6 @@
 		"eslint-plugin-react-hooks": "^4.6.2",
 		"globals": "^15.0.0",
 		"husky": "^9.0.11",
-		"next": "^14.2.3",
 		"rollup": "^4.16.4"
 	},
 	"packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
