@@ -8,6 +8,9 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Check out code
@@ -29,6 +32,7 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - run: npm publish
+      - name: Publish to npm
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
