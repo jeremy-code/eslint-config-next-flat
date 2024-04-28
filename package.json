@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-next-flat",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "(Tentative) ESLint Flat Config for Next.js",
 	"keywords": [
 		"eslint",

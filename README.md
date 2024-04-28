@@ -41,7 +41,7 @@ module.exports = [
   js.configs.recommended,
   next,
   {
-    files: ["**/*.js", "**/*.mjs"],
+    files: ["**/*.js", "**/*.jsx"],
     languageOptions: {
       parser,
       parserOptions: {
@@ -56,6 +56,22 @@ module.exports = [
         },
       },
     },
+  },
+];
+```
+
+Depending on your project, you may need to adjust the `files` and `ignore` properties such as:
+
+```js
+const js = require("@eslint/js");
+const next = require("eslint-config-next-flat");
+
+module.exports = [
+  { ignore: [".next"] }, // Change if `distDir` in Next.js config is different
+  js.configs.recommended,
+  {
+    files: ["src", "pages", "components", "lib", "utils"], // Add your Next.js project directories
+    ...next,
   },
 ];
 ```
